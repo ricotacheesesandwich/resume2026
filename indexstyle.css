@@ -1,0 +1,983 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #aaa;
+  color: #222;
+  font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.page {
+  width: 1024px;
+  margin: 0 auto;
+  background: #fff;
+  overflow: hidden;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.section-label {
+  margin: 0;
+  color: #d21816;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.927px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19.75px;
+}
+
+.section-label::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2.134px;
+  margin-top: 12px;
+  background: #d21816;
+}
+
+/* HEADER */
+/* 디자인,디벨롭로고 */
+.site-header {
+  width: 1024px;
+  height: 64px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e9e9e9;
+}
+
+.logo {
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13.277px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+/* 메뉴 */
+.site-nav ul {
+  display: flex;
+  gap: 44px;
+
+  color: #1e1e1e;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 링크 */
+.site-nav a {
+  position: relative;
+  display: inline-block;
+
+  color: #1e1e1e;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+/* 밑줄 */
+.site-nav a::after {
+  content: "";
+
+  position: absolute;
+  left: -4px;
+  bottom: -10px;
+  width: calc(100% + 8px);
+  height: 2px;
+
+  background: #d21816;
+
+  transform: scaleX(0);
+  transform-origin: left center;
+
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.site-nav a:hover {
+  color: #d21816;
+}
+
+.site-nav a:hover::after {
+  transform: scaleX(1);
+}
+/* HERO */
+/* 메인 전체관련 */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  background: #e9e9e9;
+  overflow: hidden;
+}
+/* 포폴타이틀 */
+.hero__img {
+  position: absolute;
+  left: 25px;
+  top: -160px;
+  width: 850px;
+  height: 720px;
+  aspect-ratio: 85 / 29;
+  object-fit: contain;
+  transform: none;
+  z-index: 1;
+}
+/* 포폴글자 */
+.hero__copy {
+  position: absolute;
+  left: 80px;
+  top: 465px;
+  margin: 0;
+  z-index: 2;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 17.786px;
+  font-weight: 400;
+  line-height: 28.457px;
+}
+/* 글자 아래 붉은선 */
+.hero__copy::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2.134px;
+  margin-top: 22px;
+  background: #d21816;
+}
+/* 명함전체/선 */
+.hero__profile {
+  position: absolute;
+  left: 690px;
+  top: 475px;
+
+  padding-left: 22px;
+  border-left: 1px solid #999;
+  z-index: 2;
+}
+/* 명함이름 */
+.hero__profile h2 {
+  margin: 0 0 4px;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 19.113px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25.484px;
+}
+/* 명함설명 */
+.hero__profile p {
+  margin: 0;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.927px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.75px;
+}
+
+/* ABOUT */
+/* 어바웃 전체 */
+.about {
+  position: relative;
+  height: 510px;
+  padding: 72px 80px;
+  background: #f1f1f1;
+}
+/* about me */
+/* 라벨명을 다른 애들과 다르게 별개로 해둠. 다른 건 section으로 설정함 */
+.about-label {
+  color: #d21816;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.927px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19.75px;
+}
+
+/* 아이디어를 구현하는 개발자 김태은입니다. */
+.about h2 {
+  margin: 92px -10 42px;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+}
+
+/* 어바웃 관련 설명 */
+.about p:not(.about-label) {
+  margin: 0;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+/* 전구아이콘 */
+.about__icon {
+  position: absolute;
+  right: 140px;
+  top: 150px;
+  width: 188px;
+  opacity: 0.65;
+}
+
+/* PROFILE */
+/* 포폴 전체 */
+.profile-section {
+  height: 640px;
+  padding: 60px 80px;
+  display: grid;
+  grid-template-columns: 360px 470px;
+  gap: 45px;
+  background: #fff;
+}
+
+/* 원형 얼굴 */
+.circle-deco {
+  width: 255px;
+  height: 255px;
+  margin: 0 0 42px 22px;
+  background: #b86a6c;
+  border-radius: 50%;
+  box-shadow: 24px 24px 0 #ddd;
+}
+
+/* 붉은선 */
+.red-line {
+  width: 50px;
+  height: 2.134px;
+  margin: 0 0 18px;
+  background: #d21816;
+}
+
+/* 사용자, 디테일, 그리고 지속 가능한 경험 */
+.profile-section__left h2 {
+  margin: 0 0 24px;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+/* 설명내용 */
+.profile-section__left p:not(.red-line) {
+  margin: 0 0 20px;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+/* 오른쪽 영역 */
+.profile-section__right {
+  width: 470px;
+}
+/* 정보 레이아웃 */
+.information dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 18px;
+  margin: 24px 0px 42px;
+}
+/* NAME, MAIL에는 위 선 없음 */
+.information div {
+  padding-top: 12px;
+}
+/* AGE부터 위 선 */
+.information div:nth-child(n + 3) {
+  border-top: 1px solid #aaa;
+}
+/* 정보 제목 */
+.information dt {
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+/* 정보 내용 */
+.information dd {
+  margin: 12px 0 0;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/* 경험 영역 */
+.experience {
+  border-top: 1px solid #aaa;
+  padding-top: 28px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 36px;
+}
+.experience-left {
+  padding-right: 0;
+}
+/* 중앙선 */
+.experience-right {
+  position: relative;
+  padding-left: 0px;
+}
+.experience-right::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+
+  width: 1px;
+  height: 200px;
+  background: #ddd;
+}
+.experience-left article + article {
+  margin-top: 36px;
+}
+/* 경험 제목 */
+.experience h3 {
+  margin: 0 0 12px;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* 경험 내용 */
+.experience li,
+.experience p {
+  margin: 0;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+/* LEARNING */
+/* 기본적틀 */
+.learning-section {
+  height: 650px;
+  padding: 60px 80px;
+  display: grid;
+  grid-template-columns: 355px 1fr;
+  gap: 0px;
+  background: #eee;
+}
+/* 다양한 배움 추구 */
+.learning-section h2 {
+  margin: 20px 0 34px;
+  letter-spacing: -0.05em;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+/* 설명 */
+.learning-section__left > p:not(.section-label) {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.skills {
+  margin-top: 62px;
+}
+/* SKLLS */
+.skills h3 {
+  margin: 0 0 13px;
+  color: #d21816;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+}
+/* 스킬 리스트 레이아웃 */
+.skills__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+}
+/* 디자인 디벨롭퍼 */
+.skills h4 {
+  margin: 0 0 14px;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+}
+/* 스킬 리스트 */
+.skills li {
+  margin-bottom: 8px;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+}
+/* ORBIT */
+/* 돌아가는원 */
+.tool-orbit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #ccc;
+  padding-left: 35px;
+}
+.orbit-area {
+  position: relative;
+  width: 430px;
+  height: 430px;
+}
+
+.orbit-line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ff2a2a;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.tool-list {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  animation: orbit 40s linear infinite;
+  z-index: 1;
+}
+/* 돌아가는점 */
+.orbit-dots {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 440px;
+  height: 440px;
+
+  transform: translate(-50%, -50%);
+  animation: orbit 40s linear infinite;
+}
+
+.orbit-dots span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 6px;
+  height: 6px;
+
+  background: #d21816;
+  border-radius: 50%;
+}
+.orbit-dots span:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(15deg) translateY(-199px);
+}
+.orbit-dots span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(45deg) translateY(-199px);
+}
+.orbit-dots span:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(75deg) translateY(-199px);
+}
+.orbit-dots span:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(105deg) translateY(-199px);
+}
+.orbit-dots span:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(135deg) translateY(-199px);
+}
+.orbit-dots span:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(165deg) translateY(-199px);
+}
+.orbit-dots span:nth-child(7) {
+  transform: translate(-50%, -50%) rotate(195deg) translateY(-199px);
+}
+.orbit-dots span:nth-child(8) {
+  transform: translate(-50%, -50%) rotate(225deg) translateY(-199px);
+}
+.orbit-dots span:nth-child(9) {
+  transform: translate(-50%, -50%) rotate(255deg) translateY(-199px);
+}
+.orbit-dots span:nth-child(10) {
+  transform: translate(-50%, -50%) rotate(285deg) translateY(-199px);
+}
+.orbit-dots span:nth-child(11) {
+  transform: translate(-50%, -50%) rotate(315deg) translateY(-199px);
+}
+.orbit-dots span:nth-child(12) {
+  transform: translate(-50%, -50%) rotate(345deg) translateY(-199px);
+}
+/* 네모상자 */
+.tool-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 62px;
+  height: 62px;
+}
+
+.tool-card {
+  width: 62px;
+  height: 62px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: keep-upright 40s linear infinite;
+}
+/* 이미지 */
+.tool-card img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tool-item:nth-child(1) {
+  --angle: 0deg;
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-200px);
+}
+.tool-item:nth-child(2) {
+  --angle: 30deg;
+  transform: translate(-50%, -50%) rotate(30deg) translateY(-200px);
+}
+.tool-item:nth-child(3) {
+  --angle: 60deg;
+  transform: translate(-50%, -50%) rotate(60deg) translateY(-200px);
+}
+.tool-item:nth-child(4) {
+  --angle: 90deg;
+  transform: translate(-50%, -50%) rotate(90deg) translateY(-200px);
+}
+.tool-item:nth-child(5) {
+  --angle: 120deg;
+  transform: translate(-50%, -50%) rotate(120deg) translateY(-200px);
+}
+.tool-item:nth-child(6) {
+  --angle: 150deg;
+  transform: translate(-50%, -50%) rotate(150deg) translateY(-200px);
+}
+.tool-item:nth-child(7) {
+  --angle: 180deg;
+  transform: translate(-50%, -50%) rotate(180deg) translateY(-200px);
+}
+.tool-item:nth-child(8) {
+  --angle: 210deg;
+  transform: translate(-50%, -50%) rotate(210deg) translateY(-200px);
+}
+.tool-item:nth-child(9) {
+  --angle: 240deg;
+  transform: translate(-50%, -50%) rotate(240deg) translateY(-200px);
+}
+.tool-item:nth-child(10) {
+  --angle: 270deg;
+  transform: translate(-50%, -50%) rotate(270deg) translateY(-200px);
+}
+.tool-item:nth-child(11) {
+  --angle: 300deg;
+  transform: translate(-50%, -50%) rotate(300deg) translateY(-200px);
+}
+.tool-item:nth-child(12) {
+  --angle: 330deg;
+  transform: translate(-50%, -50%) rotate(330deg) translateY(-200px);
+}
+/* 전구버튼 */
+.idea-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 88px;
+  height: 88px;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+/* 전구이미지 */
+.idea-button img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 88px;
+  height: 88px;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  transition:
+    opacity 0.3s ease,
+    filter 0.3s ease;
+}
+
+.bulb-off {
+  opacity: 1;
+}
+
+.bulb-on {
+  opacity: 0;
+}
+
+.idea-button:hover .bulb-off {
+  opacity: 0;
+}
+
+.idea-button:hover .bulb-on {
+  opacity: 1;
+  filter: drop-shadow(0 0 18px #ffd84d);
+}
+
+/* 돌아가는 애니메이션 */
+@keyframes orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes keep-upright {
+  from {
+    transform: rotate(calc(-1 * var(--angle))) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(calc(-1 * var(--angle))) rotate(-360deg);
+  }
+}
+
+/* COMMUNICATION */
+/* 전체 */
+.communication-section {
+  padding: 45px 80px;
+  background: #f5f5f5;
+  min-height: 500px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 45px;
+  overflow: visible;
+}
+
+.communication-section__left {
+  width: 320px;
+}
+
+.communication-section__left h2 {
+  margin: 15px 0 22px;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.communication-section__left > p:not(.section-label) {
+  margin: 0;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+/* 왼쪽 리스트 */
+.communication-list {
+  margin-top: 36px;
+}
+/* 회색상자 */
+.communication-list article {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 22px;
+  align-items: center;
+
+  padding: 0 0 14px 0;
+  margin-bottom: 14px;
+
+  border-bottom: 1px solid #ddd;
+}
+/* 붉은선 */
+.communication-list article::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 3px;
+  height: 64px;
+
+  background: #d21816;
+}
+
+.communication-list article > img {
+  width: 90px;
+  height: 64px;
+
+  padding: 18px;
+
+  background: #eeeeee;
+  object-fit: contain;
+}
+
+.communication-list h3 {
+  margin: 0 0 6px;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13.65px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16.8px;
+}
+
+.communication-list p {
+  margin: 0;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 10.5px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15.75px;
+  color: #666;
+}
+
+/* 오른쪽 플로우 */
+
+.collaboration-flow {
+  min-width: 0;
+  padding-top: 8px;
+}
+
+.flow-title h3 {
+  margin: 0 0 8px;
+  font-size: 12px;
+}
+
+.flow-title p {
+  margin: 0 0 22px;
+  color: #d21816;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* 상단 카드 */
+
+.role-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.role-list li {
+  position: relative;
+  min-height: 92px;
+  padding: 16px 8px;
+
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.role-list img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin: 0 auto 8px;
+}
+
+.role-list strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #d21816;
+  font-size: 9px;
+}
+
+.role-list p {
+  margin: 0;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.role-list li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -28px;
+
+  height: 28px;
+  border-left: 1px dashed #f3b2b2;
+}
+
+/* KIM TAEEUN */
+
+.taeeun-card {
+  position: relative;
+  width: 220px;
+  margin: 28px auto 0;
+  padding: 12px 18px;
+
+  background: #f4e9e9;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.taeeun-card img {
+  width: 28px;
+  height: 28px;
+}
+
+.taeeun-card h4 {
+  margin: 0 0 4px;
+  font-size: 11px;
+}
+
+.taeeun-card p {
+  margin: 0;
+  font-size: 9px;
+}
+
+.taeeun-card::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+
+  height: 36px;
+  border-left: 1px dashed #f3b2b2;
+}
+
+/* DIRECTION */
+
+.direction-card {
+  width: 360px;
+  margin: 36px auto 0;
+  padding: 14px 20px;
+
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.direction-card img {
+  width: 28px;
+  height: 28px;
+}
+
+.direction-card h4 {
+  margin: 0 0 4px;
+  font-size: 11px;
+}
+
+.direction-card p {
+  margin: 0;
+  font-size: 9px;
+}

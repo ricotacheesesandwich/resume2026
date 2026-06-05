@@ -1,0 +1,469 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #aaa;
+  color: #222;
+  font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.page {
+  width: 1024px;
+  margin: 0 auto;
+  background: #fff;
+  overflow: hidden;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.section-label {
+  margin: 0;
+  color: #d21816;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.927px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19.75px;
+}
+
+.section-label::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2.134px;
+  margin-top: 12px;
+  background: #d21816;
+}
+
+/* HEADER */
+/* 디자인,디벨롭로고 */
+.site-header {
+  width: 1024px;
+  height: 64px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e9e9e9;
+}
+
+.logo {
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13.277px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+/* 메뉴 */
+.site-nav ul {
+  display: flex;
+  gap: 44px;
+
+  color: #1e1e1e;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 링크 */
+.site-nav a {
+  position: relative;
+  display: inline-block;
+
+  color: #1e1e1e;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+/* 밑줄 */
+.site-nav a::after {
+  content: "";
+
+  position: absolute;
+  left: -4px;
+  bottom: -10px;
+  width: calc(100% + 8px);
+  height: 2px;
+
+  background: #d21816;
+
+  transform: scaleX(0);
+  transform-origin: left center;
+
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.site-nav a:hover {
+  color: #d21816;
+}
+
+.site-nav a:hover::after {
+  transform: scaleX(1);
+}
+/* HERO */
+/* 메인 전체관련 */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  background: #e9e9e9;
+  overflow: hidden;
+}
+/* 포폴타이틀 */
+.hero__img {
+  position: absolute;
+  left: 25px;
+  top: -160px;
+  width: 850px;
+  height: 720px;
+  aspect-ratio: 85 / 29;
+  object-fit: contain;
+  transform: none;
+  z-index: 1;
+}
+/* 포폴글자 */
+.hero__copy {
+  position: absolute;
+  left: 80px;
+  top: 465px;
+  margin: 0;
+  z-index: 2;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 17.786px;
+  font-weight: 400;
+  line-height: 28.457px;
+}
+/* 글자 아래 붉은선 */
+.hero__copy::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2.134px;
+  margin-top: 22px;
+  background: #d21816;
+}
+/* 명함전체/선 */
+.hero__profile {
+  position: absolute;
+  left: 690px;
+  top: 475px;
+
+  padding-left: 22px;
+  border-left: 1px solid #999;
+  z-index: 2;
+}
+/* 명함이름 */
+.hero__profile h2 {
+  margin: 0 0 4px;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 19.113px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25.484px;
+}
+/* 명함설명 */
+.hero__profile p {
+  margin: 0;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.927px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.75px;
+}
+
+/* DESIGN INTRO */
+
+#developer {
+  padding: 90px 64px 120px;
+  background: #fff;
+}
+
+#developer > p {
+  margin: 0 0 12px;
+  color: #d21816;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#developer h2 {
+  margin: 0 0 52px;
+  font-size: 50px;
+  line-height: 1;
+}
+
+#developer article h3 {
+  margin: 0 0 28px;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+#developer article h3::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  margin-bottom: 22px;
+  background: #d21816;
+}
+
+#developer article p {
+  margin: 0 0 18px;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* TOOLS */
+
+#tools {
+  padding: 55px 82px 80px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+}
+
+#tools > p {
+  margin: 0;
+  color: #d21816;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+#tools h2 {
+  margin: 6px 0 34px;
+  font-size: 22px;
+}
+
+#tools ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+#tools article {
+  height: 230px;
+  padding: 20px 18px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#tools h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+#tools article p {
+  margin: 8px 0;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+#tools article img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin: 24px auto;
+}
+
+/* AWARD DESIGN */
+
+#award-design {
+  padding: 70px 64px 80px;
+  background: #e9e9e9;
+
+  display: grid;
+  grid-template-columns: 230px 1fr 1fr 260px;
+  gap: 18px;
+  align-items: end;
+}
+
+#award-design > p {
+  grid-column: 1 / -1;
+  margin: 0 0 50px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+#award-design h2 {
+  grid-column: 1;
+  margin: 0;
+  font-size: 46px;
+  line-height: 1;
+}
+
+#award-design article {
+  grid-column: 2 / 4;
+  align-self: start;
+}
+
+#award-design article h3 {
+  margin: 0 0 8px;
+  font-size: 12px;
+}
+
+#award-design article p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+#award-design img {
+  height: 170px;
+  object-fit: cover;
+}
+
+#award-design img:nth-of-type(1) {
+  grid-column: 1 / 3;
+  width: 100%;
+}
+
+#award-design img:nth-of-type(2) {
+  grid-column: 3;
+  width: 100%;
+}
+
+#award-design img:nth-of-type(3) {
+  grid-column: 4;
+  width: 100%;
+}
+
+/* AI DESIGN */
+
+#ai-design {
+  padding: 70px 64px 80px;
+  background: #fff;
+}
+
+#ai-design h2 {
+  margin: 0 0 36px;
+  font-size: 13px;
+}
+
+#ai-design ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 42px;
+  margin-bottom: 50px;
+}
+
+#ai-design figure {
+  margin: 0;
+}
+
+#ai-design figure img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+#ai-design article {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  gap: 30px;
+}
+
+#ai-design article h3 {
+  margin: 0;
+  font-size: 54px;
+  line-height: 1;
+}
+
+#ai-design article p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* MOTION */
+
+#motion {
+  padding: 55px 64px 90px;
+  background: #e9e9e9;
+}
+
+#motion > p {
+  margin: 0 0 24px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#motion figure {
+  margin: 0 0 45px;
+  background: #fff;
+}
+
+#motion figure img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+#motion article {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+#motion h2 {
+  margin: 0;
+  font-size: 54px;
+  line-height: 1;
+}
+
+#motion p {
+  font-size: 11px;
+  line-height: 1.7;
+}
