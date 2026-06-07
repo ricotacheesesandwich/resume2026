@@ -428,7 +428,7 @@ img {
 }
 /* 다양한 배움 추구 */
 .learning-section h2 {
-  margin: 20px 0 34px;
+  margin: 10px 0 15px;
   letter-spacing: -0.05em;
   color: #1e1e1e;
   leading-trim: both;
@@ -443,7 +443,7 @@ img {
 .learning-section__left > p:not(.section-label) {
   margin: 0;
   font-size: 13px;
-  line-height: 1.9;
+  line-height: 2;
 }
 
 .skills {
@@ -738,8 +738,8 @@ img {
   min-height: 500px;
   height: auto;
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 45px;
+  grid-template-columns: 420px 1fr;
+  gap: 60px;
   overflow: visible;
 }
 
@@ -843,18 +843,32 @@ img {
 .collaboration-flow {
   min-width: 0;
   padding-top: 8px;
+  overflow: visible;
+}
+
+.collaboration-flow {
+  min-width: 0;
+  padding-top: 8px;
 }
 
 .flow-title h3 {
-  margin: 0 0 8px;
-  font-size: 12px;
+  margin: 30px -125px 8px;
+  font-size: 20px;
 }
 
 .flow-title p {
-  margin: 0 0 22px;
+  margin: 0px -125px 0;
   color: #d21816;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 700;
+}
+.flow-img {
+  width: 600px;
+  max-width: none;
+  display: block;
+
+  margin-left: -160px;
+  margin-top: 10px;
 }
 
 /* 상단 카드 */
