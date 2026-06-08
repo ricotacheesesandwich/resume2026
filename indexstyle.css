@@ -995,3 +995,460 @@ img {
   margin: 0;
   font-size: 9px;
 }
+
+/* MOBILE MENU - CSS ONLY */
+
+.mobile-menu-btn {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    position: relative;
+    height: 120px;
+    padding: 28px 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: fixed;
+    left: 18px;
+    top: 18px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .mobile-menu-btn span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #d9d9d9;
+    transform: rotate(45deg);
+  }
+
+  .site-nav {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    padding: 70px 32px;
+    background: #aaa;
+    z-index: 1001;
+    transition: left 0.35s ease;
+  }
+
+  .site-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .site-nav a {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .site-nav a::after {
+    display: none;
+  }
+
+  #menu-toggle:checked ~ .site-nav {
+    left: 0;
+  }
+
+  #menu-toggle:checked ~ .mobile-menu-btn span {
+    background: #777;
+  }
+}
+
+/* ===============================
+   RESPONSIVE FINAL CODE
+   1280 / 1024 / 768 / 320
+================================ */
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* MOBILE MENU */
+.mobile-menu-btn {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* 1280 */
+@media (max-width: 1280px) {
+  .page,
+  .site-header {
+    width: 1024px;
+    max-width: 100%;
+  }
+}
+
+/* 1024 */
+@media (max-width: 1024px) {
+  .page,
+  .site-header {
+    width: 100%;
+  }
+
+  .site-header {
+    padding: 0 60px;
+  }
+
+  .hero__copy {
+    left: 60px;
+  }
+
+  .hero__profile {
+    left: auto;
+    right: 60px;
+  }
+
+  .about,
+  .profile-section,
+  .learning-section,
+  .communication-section {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+/* 768 */
+@media (max-width: 768px) {
+  .page {
+    width: 100%;
+  }
+
+  .site-header {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    padding: 28px 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-left: 32px;
+    font-size: 18px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: fixed;
+    left: 18px;
+    top: 18px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .mobile-menu-btn span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #d9d9d9;
+    transform: rotate(45deg);
+  }
+
+  .site-nav {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    padding: 70px 32px;
+    background: #aaa;
+    z-index: 1001;
+    transition: left 0.35s ease;
+  }
+
+  .site-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .site-nav a {
+    font-size: 18px;
+  }
+
+  .site-nav a::after {
+    display: none;
+  }
+
+  #menu-toggle:checked ~ .site-nav {
+    left: 0;
+  }
+
+  #menu-toggle:checked ~ .mobile-menu-btn span {
+    background: #777;
+  }
+
+  .hero {
+    height: 720px;
+    position: relative;
+  }
+
+  .hero__img {
+    width: 76%;
+    height: auto !important;
+    aspect-ratio: auto;
+    left: 50%;
+    top: 250px;
+    transform: translateX(-50%);
+  }
+
+  .hero__copy {
+    display: none;
+  }
+
+  .hero__profile {
+    left: 82px;
+    top: 595px;
+    right: auto;
+    transform: none;
+  }
+
+  .hero__profile h2 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .hero__profile p {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .about {
+    height: auto;
+    padding: 90px 32px;
+  }
+
+  .about h2 {
+    margin: 70px 0 28px;
+    font-size: 31px;
+    line-height: 1.35;
+    letter-spacing: -0.08em;
+  }
+
+  .about__icon {
+    right: 32px;
+    top: 120px;
+    width: 130px;
+    opacity: 0.18;
+  }
+
+  .profile-section {
+    height: auto;
+    display: block;
+    padding: 80px 32px;
+  }
+
+  .circle-deco {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto 56px;
+  }
+
+  .profile-section__right {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .information dl {
+    display: block;
+  }
+
+  .information div {
+    text-align: center;
+    padding: 18px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  .experience {
+    display: block;
+    text-align: center;
+  }
+
+  .experience-right {
+    border-top: 1px solid #aaa;
+    padding-top: 32px;
+    margin-top: 32px;
+  }
+
+  .experience-right::before {
+    display: none;
+  }
+
+  .learning-section {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 32px;
+    text-align: center;
+  }
+
+  .learning-section .section-label {
+    text-align: center;
+  }
+
+  .learning-section .section-label::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .learning-section__left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .learning-section__left .section-label {
+    order: 1;
+  }
+
+  .learning-section__left h2 {
+    order: 2;
+  }
+
+  .tool-orbit {
+    order: 3;
+    border-left: none;
+    padding-left: 0;
+    margin-top: 56px;
+  }
+
+  .learning-section__left > p:not(.section-label) {
+    order: 4;
+    margin-top: 60px;
+  }
+
+  .skills {
+    order: 5;
+    margin-top: 80px;
+    text-align: left;
+  }
+
+  .orbit-area {
+    transform: scale(0.65);
+    margin: -60px auto;
+  }
+
+  .communication-section {
+    display: block;
+    padding: 90px 32px;
+  }
+
+  .communication-section__left {
+    width: 100%;
+  }
+
+  .collaboration-flow {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .flow-title h3,
+  .flow-title p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .flow-img {
+    width: 100%;
+    max-width: 460px;
+    margin: 28px auto 0;
+  }
+}
+
+/* 320 */
+@media (max-width: 320px) {
+  .site-header {
+    height: 110px;
+    padding: 28px 22px;
+  }
+
+  .logo {
+    margin-left: 24px;
+    font-size: 13px;
+  }
+
+  .hero {
+    height: 590px;
+  }
+
+  .hero__img {
+    width: 78%;
+    height: auto !important;
+    top: 225px;
+  }
+
+  .hero__profile {
+    left: 54px;
+    top: 485px;
+  }
+
+  .hero__profile h2 {
+    font-size: 18px;
+  }
+
+  .hero__profile p {
+    font-size: 15px;
+  }
+
+  .about,
+  .profile-section,
+  .learning-section,
+  .communication-section {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .about h2 {
+    font-size: 27px;
+  }
+
+  .orbit-area {
+    transform: scale(0.52);
+  }
+}
+@media (max-width: 768px) {
+  /* AWARD - EDUCATION 사이 */
+  .experience-left article + article {
+    border-top: 1px solid #aaa;
+    padding-top: 32px;
+    margin-top: 32px;
+  }
+
+  /* EDUCATION - 교내외 대외활동 사이 */
+  .experience-right {
+    border-top: 1px solid #aaa;
+    padding-top: 32px;
+    margin-top: 32px;
+  }
+}
