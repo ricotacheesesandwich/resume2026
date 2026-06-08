@@ -1,0 +1,2387 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #aaa;
+  color: #222;
+  font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.page {
+  width: 1024px;
+  margin: 0 auto;
+  background: #fff;
+  overflow: hidden;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.section-label {
+  margin: 0;
+  color: #d21816;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.927px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19.75px;
+}
+
+/* HEADER */
+/* 디자인,디벨롭로고 */
+.site-header {
+  width: 1024px;
+  height: 64px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e9e9e9;
+}
+
+.logo {
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13.277px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+/* 메뉴 */
+.site-nav ul {
+  display: flex;
+  gap: 44px;
+
+  color: #1e1e1e;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 링크 */
+.site-nav a {
+  position: relative;
+  display: inline-block;
+
+  color: #1e1e1e;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+/* 밑줄 */
+.site-nav a::after {
+  content: "";
+
+  position: absolute;
+  left: -4px;
+  bottom: -10px;
+  width: calc(100% + 8px);
+  height: 2px;
+
+  background: #d21816;
+
+  transform: scaleX(0);
+  transform-origin: left center;
+
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.site-nav a:hover {
+  color: #d21816;
+}
+
+.site-nav a:hover::after {
+  transform: scaleX(1);
+}
+/* HERO */
+/* 메인 전체관련 */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  background: #e9e9e9;
+  overflow: hidden;
+}
+/* 포폴타이틀 */
+.hero__img {
+  position: absolute;
+  left: 25px;
+  top: -160px;
+  width: 850px;
+  height: 720px;
+  aspect-ratio: 85 / 29;
+  object-fit: contain;
+  transform: none;
+  z-index: 1;
+}
+/* 포폴글자 */
+.hero__copy {
+  position: absolute;
+  left: 80px;
+  top: 465px;
+  margin: 0;
+  z-index: 2;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 17.786px;
+  font-weight: 400;
+  line-height: 28.457px;
+}
+/* 글자 아래 붉은선 */
+.hero__copy::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2.134px;
+  margin-top: 22px;
+  background: #d21816;
+}
+/* 명함전체/선 */
+.hero__profile {
+  position: absolute;
+  left: 690px;
+  top: 475px;
+
+  padding-left: 22px;
+  border-left: 1px solid #999;
+  z-index: 2;
+}
+/* 명함이름 */
+.hero__profile h2 {
+  margin: 0 0 4px;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 19.113px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25.484px;
+}
+/* 명함설명 */
+.hero__profile p {
+  margin: 0;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.927px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.75px;
+}
+
+/* DESIGN INTRO */
+
+.design-intro {
+  padding: 90px 64px 120px;
+  background: #fff;
+}
+
+.design-intro .section-label {
+  margin: 0 0 12px;
+  color: #d21816;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.design-intro h2 {
+  margin: 0 0 52px;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.design-intro article h3 {
+  margin: 0 0 28px;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.design-intro article h3::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-bottom: 22px;
+  background: #d21816;
+}
+
+.design-intro article p {
+  margin: 0;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+/* TOOLS */
+
+.tools-section {
+  padding: 55px 82px 80px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+}
+
+.tools-section > .section-label {
+  margin: 0;
+  color: #d21816;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19.75px;
+}
+
+.tools-section h2 {
+  position: relative;
+  margin: 6px 0 74px;
+
+  color: #1e1e1e;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.tools-section h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -34px;
+
+  width: 820px;
+  height: 1px;
+
+  transform: translateX(-50%);
+  background: #cfcfcf;
+}
+
+.tool-card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tool-card-list > li > article {
+  height: 360px;
+  padding: 25px 22px 16px;
+
+  background: #fff;
+  border: 1px solid #eee;
+  border-bottom: 5px solid #ff7a00;
+  border-radius: 10px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tool-card-list h3 {
+  margin: 0;
+  color: #1e1e1e;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 17.786px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.tool-subtitle {
+  margin: 5px 0 0;
+  color: #1e1e1e;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.26px;
+}
+
+.tag-list {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+
+  margin: 12px 0 26px;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 4px 8px;
+  border-radius: 2px;
+
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 12.331px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.tool-card-list img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  display: block;
+  margin: -10px;
+}
+
+.tool-desc {
+  width: 180px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #eee;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  text-align: left;
+}
+
+.check-icon {
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+
+  border-radius: 50%;
+  background: #ff6a00;
+
+  flex-shrink: 0;
+}
+
+.check-icon::after {
+  content: "✓";
+  display: block;
+
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 12px;
+  text-align: center;
+}
+
+.tool-desc p {
+  margin: 0;
+  text-align: left;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -0.28px;
+}
+
+/* 체크표시 색상 */
+
+.tool-card-list > li:nth-child(1) .check-icon {
+  background: #ff4f9a;
+}
+
+.tool-card-list > li:nth-child(2) .check-icon {
+  background: #0096e6;
+}
+
+.tool-card-list > li:nth-child(3) .check-icon {
+  background: #ff7a00;
+}
+
+.tool-card-list > li:nth-child(4) .check-icon {
+  background: #d62469;
+}
+
+.tool-card-list > li:nth-child(5) .check-icon {
+  background: #6a50d8;
+}
+
+.tool-card-list > li:nth-child(6) .check-icon {
+  background: #1f80d8;
+}
+
+/* 카드별 포인트 컬러 */
+
+.tool-card-list > li:nth-child(1) article {
+  border-color: #ffd6e8;
+  border-bottom-color: #ff4f9a;
+}
+
+.tool-card-list > li:nth-child(1) .tag-list li {
+  background: #ffe5f0;
+  color: #ff4f9a;
+}
+
+.tool-card-list > li:nth-child(2) article {
+  border-color: #d8efff;
+  border-bottom-color: #0096e6;
+}
+
+.tool-card-list > li:nth-child(2) .tag-list li {
+  background: #e5f4ff;
+  color: #0096e6;
+}
+
+.tool-card-list > li:nth-child(3) article {
+  border-color: #ffe0c2;
+  border-bottom-color: #ff7a00;
+}
+
+.tool-card-list > li:nth-child(3) .tag-list li {
+  background: #fff0df;
+  color: #ff7a00;
+}
+
+.tool-card-list > li:nth-child(4) article {
+  border-color: #ffd6e8;
+  border-bottom-color: #d62469;
+}
+
+.tool-card-list > li:nth-child(4) .tag-list li {
+  background: #ffe5f0;
+  color: #d62469;
+}
+
+.tool-card-list > li:nth-child(5) article {
+  border-color: #e1dcff;
+  border-bottom-color: #6a50d8;
+}
+
+.tool-card-list > li:nth-child(5) .tag-list li {
+  background: #eeeaff;
+  color: #6a50d8;
+}
+
+.tool-card-list > li:nth-child(6) article {
+  border-color: #d8efff;
+  border-bottom-color: #1f80d8;
+}
+
+.tool-card-list > li:nth-child(6) .tag-list li {
+  background: #e5f4ff;
+  color: #1f80d8;
+}
+
+/* AWARD DESIGN */
+/* AWARD DESIGN */
+
+.award-section {
+  position: relative;
+  width: 1024px;
+  height: 620px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+.award-scroll {
+  display: flex;
+  width: 1024px;
+  height: 620px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+.award-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.award-panel {
+  flex: 0 0 1024px;
+  width: 1024px;
+  height: 620px;
+  box-sizing: border-box;
+  background: #fff;
+  scroll-snap-align: start;
+}
+
+/* NAV */
+
+.award-nav {
+  position: absolute;
+  right: 38px;
+  bottom: 28px;
+  z-index: 50;
+
+  display: flex;
+  gap: 8px;
+}
+
+.award-nav a {
+  width: 26px;
+  height: 26px;
+
+  border: 1px solid #1e1e1e;
+  border-radius: 50%;
+
+  color: #1e1e1e;
+  background: rgba(255, 255, 255, 0.85);
+
+  text-decoration: none;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 26px;
+
+  transition: 0.25s;
+}
+
+.award-nav a:hover {
+  color: #fff;
+  background: #1e1e1e;
+}
+
+/* PAGE 01 */
+
+.award-page-1 {
+  padding: 52px 80px 50px;
+}
+
+.award-label {
+  margin: 0 0 68px;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  font-family: Montserrat;
+  font-size: 16.363px;
+
+  font-weight: 700;
+  line-height: normal;
+}
+
+.award-title-area {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 25px;
+  align-items: end;
+
+  margin-bottom: 20px;
+}
+
+.award-title-area h2 {
+  margin: 0;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 75.945px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 71.017px; /* 93.512% */
+  letter-spacing: -2.278px;
+}
+
+.award-title-area p {
+  margin: 0 0 0px;
+
+  color: #1e1e1e;
+  font-family: Montserrat;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+.award-book-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.award-card {
+  margin: 0;
+}
+
+.award-card img {
+  width: 100%;
+  height: 255px;
+  display: block;
+  object-fit: cover;
+}
+
+.award-caption {
+  margin: 10px 0 0;
+
+  color: #1e1e1e;
+  font-family: Pretendard, sans-serif;
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.award-caption strong {
+  font-weight: 700;
+}
+
+/* PAGE 02 */
+
+.award-page-2 {
+  padding: 52px 80px 52px;
+}
+
+.award-display-area {
+  display: grid;
+  grid-template-columns: 590px 250px;
+  grid-template-rows: 70px auto;
+  column-gap: 24px;
+  row-gap: 13px;
+
+  width: 864px;
+  height: 516px;
+  box-sizing: border-box;
+}
+
+.page-2-label {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  margin: 0;
+  align-self: start;
+}
+
+.page-2-empty {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.award-display-card {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+
+  margin: 0;
+  padding: 0;
+}
+
+.award-poster-card {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  margin: 0;
+  padding: 0;
+}
+
+.award-display-card img,
+.award-poster-card img {
+  width: 100%;
+  height: 360px;
+
+  display: block;
+  object-fit: cover;
+}
+
+.award-poster-card .award-caption {
+  margin: 12px 0 0;
+
+  color: #1e1e1e;
+  font-family: Pretendard, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.award-poster-card .award-caption strong {
+  font-weight: 700;
+}
+/* PAGE 03 */
+
+.award-page-3 {
+  padding: 70px 80px 80px;
+}
+
+.award-summary {
+  width: 760px;
+}
+
+.award-summary h2 {
+  margin: 0 0 30px;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  font-family: Montserrat;
+  font-size: 78.353px;
+  font-weight: 800;
+  line-height: 64.88px;
+}
+
+.summary-intro {
+  margin: 0 0 45px;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.856px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.award-summary ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.award-summary li {
+  margin-bottom: 38px;
+}
+
+.award-summary li strong {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.267px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.award-summary li p {
+  margin: 0;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13.45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* AI DESIGN */
+
+#ai-design {
+  padding: 70px 80px 80px;
+  background: #fff;
+}
+
+#ai-design h2 {
+  margin: 0 0 36px;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13.272px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#ai-design ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 42px;
+  margin-bottom: 50px;
+}
+
+#ai-design figure {
+  margin: 0;
+}
+
+#ai-design figure img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+#ai-design article {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  gap: 30px;
+}
+
+#ai-design article h3 {
+  margin: 0;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 59.605px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#ai-design article p {
+  margin: 0;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 10.667px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* MOTION */
+.motion-section {
+  display: grid;
+  grid-template-rows: auto auto auto;
+
+  padding: 42px 80px 62px;
+  background: #e9e9e9;
+}
+
+.motion-label {
+  margin: 0 0 20px;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13.314px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* 사진 영역 */
+
+.motion-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+
+  width: 100%;
+  overflow: hidden;
+}
+
+.motion-gallery img {
+  width: 100%;
+  height: 260px;
+
+  display: block;
+  object-fit: cover;
+}
+
+/* 정보 영역 */
+
+.motion-info {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+
+  margin-top: 32px;
+}
+
+.motion-info h2 {
+  margin: 0;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 59.798px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.motion-info p {
+  margin: 10px 0 0;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 10.701px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #aaa;
+  color: #222;
+  font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.page {
+  width: 1024px;
+  margin: 0 auto;
+  background: #fff;
+  overflow: hidden;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.section-label {
+  margin: 0;
+  color: #d21816;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.927px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19.75px;
+}
+
+/* HEADER */
+/* 디자인,디벨롭로고 */
+.site-header {
+  width: 1024px;
+  height: 64px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e9e9e9;
+}
+
+.logo {
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13.277px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+/* 메뉴 */
+.site-nav ul {
+  display: flex;
+  gap: 44px;
+
+  color: #1e1e1e;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 링크 */
+.site-nav a {
+  position: relative;
+  display: inline-block;
+
+  color: #1e1e1e;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+/* 밑줄 */
+.site-nav a::after {
+  content: "";
+
+  position: absolute;
+  left: -4px;
+  bottom: -10px;
+  width: calc(100% + 8px);
+  height: 2px;
+
+  background: #d21816;
+
+  transform: scaleX(0);
+  transform-origin: left center;
+
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.site-nav a:hover {
+  color: #d21816;
+}
+
+.site-nav a:hover::after {
+  transform: scaleX(1);
+}
+/* HERO */
+/* 메인 전체관련 */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  background: #e9e9e9;
+  overflow: hidden;
+}
+/* 포폴타이틀 */
+.hero__img {
+  position: absolute;
+  left: 25px;
+  top: -160px;
+  width: 850px;
+  height: 720px;
+  aspect-ratio: 85 / 29;
+  object-fit: contain;
+  transform: none;
+  z-index: 1;
+}
+/* 포폴글자 */
+.hero__copy {
+  position: absolute;
+  left: 80px;
+  top: 465px;
+  margin: 0;
+  z-index: 2;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 17.786px;
+  font-weight: 400;
+  line-height: 28.457px;
+}
+/* 글자 아래 붉은선 */
+.hero__copy::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2.134px;
+  margin-top: 22px;
+  background: #d21816;
+}
+/* 명함전체/선 */
+.hero__profile {
+  position: absolute;
+  left: 690px;
+  top: 475px;
+
+  padding-left: 22px;
+  border-left: 1px solid #999;
+  z-index: 2;
+}
+/* 명함이름 */
+.hero__profile h2 {
+  margin: 0 0 4px;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 19.113px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25.484px;
+}
+/* 명함설명 */
+.hero__profile p {
+  margin: 0;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.927px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.75px;
+}
+
+/* DESIGN INTRO */
+
+.design-intro {
+  padding: 90px 64px 120px;
+  background: #fff;
+}
+
+.design-intro .section-label {
+  margin: 0 0 12px;
+  color: #d21816;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.design-intro h2 {
+  margin: 0 0 52px;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.design-intro article h3 {
+  margin: 0 0 28px;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.design-intro article h3::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-bottom: 22px;
+  background: #d21816;
+}
+
+.design-intro article p {
+  margin: 0;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+/* TOOLS */
+
+.tools-section {
+  padding: 55px 82px 80px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+}
+
+.tools-section > .section-label {
+  margin: 0;
+  color: #d21816;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19.75px;
+}
+
+.tools-section h2 {
+  position: relative;
+  margin: 6px 0 74px;
+
+  color: #1e1e1e;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.tools-section h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -34px;
+
+  width: 820px;
+  height: 1px;
+
+  transform: translateX(-50%);
+  background: #cfcfcf;
+}
+
+.tool-card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tool-card-list > li > article {
+  height: 360px;
+  padding: 25px 22px 16px;
+
+  background: #fff;
+  border: 1px solid #eee;
+  border-bottom: 5px solid #ff7a00;
+  border-radius: 10px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tool-card-list h3 {
+  margin: 0;
+  color: #1e1e1e;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 17.786px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.tool-subtitle {
+  margin: 5px 0 0;
+  color: #1e1e1e;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.26px;
+}
+
+.tag-list {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+
+  margin: 12px 0 26px;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 4px 8px;
+  border-radius: 2px;
+
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 12.331px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.tool-card-list img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  display: block;
+  margin: -10px;
+}
+
+.tool-desc {
+  width: 180px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #eee;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  text-align: left;
+}
+
+.check-icon {
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+
+  border-radius: 50%;
+  background: #ff6a00;
+
+  flex-shrink: 0;
+}
+
+.check-icon::after {
+  content: "✓";
+  display: block;
+
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 12px;
+  text-align: center;
+}
+
+.tool-desc p {
+  margin: 0;
+  text-align: left;
+  color: #1e1e1e;
+  font-family: Montserrat, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -0.28px;
+}
+
+/* 체크표시 색상 */
+
+.tool-card-list > li:nth-child(1) .check-icon {
+  background: #ff4f9a;
+}
+
+.tool-card-list > li:nth-child(2) .check-icon {
+  background: #0096e6;
+}
+
+.tool-card-list > li:nth-child(3) .check-icon {
+  background: #ff7a00;
+}
+
+.tool-card-list > li:nth-child(4) .check-icon {
+  background: #d62469;
+}
+
+.tool-card-list > li:nth-child(5) .check-icon {
+  background: #6a50d8;
+}
+
+.tool-card-list > li:nth-child(6) .check-icon {
+  background: #1f80d8;
+}
+
+/* 카드별 포인트 컬러 */
+
+.tool-card-list > li:nth-child(1) article {
+  border-color: #ffd6e8;
+  border-bottom-color: #ff4f9a;
+}
+
+.tool-card-list > li:nth-child(1) .tag-list li {
+  background: #ffe5f0;
+  color: #ff4f9a;
+}
+
+.tool-card-list > li:nth-child(2) article {
+  border-color: #d8efff;
+  border-bottom-color: #0096e6;
+}
+
+.tool-card-list > li:nth-child(2) .tag-list li {
+  background: #e5f4ff;
+  color: #0096e6;
+}
+
+.tool-card-list > li:nth-child(3) article {
+  border-color: #ffe0c2;
+  border-bottom-color: #ff7a00;
+}
+
+.tool-card-list > li:nth-child(3) .tag-list li {
+  background: #fff0df;
+  color: #ff7a00;
+}
+
+.tool-card-list > li:nth-child(4) article {
+  border-color: #ffd6e8;
+  border-bottom-color: #d62469;
+}
+
+.tool-card-list > li:nth-child(4) .tag-list li {
+  background: #ffe5f0;
+  color: #d62469;
+}
+
+.tool-card-list > li:nth-child(5) article {
+  border-color: #e1dcff;
+  border-bottom-color: #6a50d8;
+}
+
+.tool-card-list > li:nth-child(5) .tag-list li {
+  background: #eeeaff;
+  color: #6a50d8;
+}
+
+.tool-card-list > li:nth-child(6) article {
+  border-color: #d8efff;
+  border-bottom-color: #1f80d8;
+}
+
+.tool-card-list > li:nth-child(6) .tag-list li {
+  background: #e5f4ff;
+  color: #1f80d8;
+}
+
+/* AWARD DESIGN */
+/* AWARD DESIGN */
+
+.award-section {
+  position: relative;
+  width: 1024px;
+  height: 620px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+.award-scroll {
+  display: flex;
+  width: 1024px;
+  height: 620px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+.award-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.award-panel {
+  flex: 0 0 1024px;
+  width: 1024px;
+  height: 620px;
+  box-sizing: border-box;
+  background: #fff;
+  scroll-snap-align: start;
+}
+
+/* NAV */
+
+.award-nav {
+  position: absolute;
+  right: 38px;
+  bottom: 28px;
+  z-index: 50;
+
+  display: flex;
+  gap: 8px;
+}
+
+.award-nav a {
+  width: 26px;
+  height: 26px;
+
+  border: 1px solid #1e1e1e;
+  border-radius: 50%;
+
+  color: #1e1e1e;
+  background: rgba(255, 255, 255, 0.85);
+
+  text-decoration: none;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 26px;
+
+  transition: 0.25s;
+}
+
+.award-nav a:hover {
+  color: #fff;
+  background: #1e1e1e;
+}
+
+/* PAGE 01 */
+
+.award-page-1 {
+  padding: 52px 80px 50px;
+}
+
+.award-label {
+  margin: 0 0 68px;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  font-family: Montserrat;
+  font-size: 16.363px;
+
+  font-weight: 700;
+  line-height: normal;
+}
+
+.award-title-area {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 25px;
+  align-items: end;
+
+  margin-bottom: 20px;
+}
+
+.award-title-area h2 {
+  margin: 0;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 75.945px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 71.017px; /* 93.512% */
+  letter-spacing: -2.278px;
+}
+
+.award-title-area p {
+  margin: 0 0 0px;
+
+  color: #1e1e1e;
+  font-family: Montserrat;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+.award-book-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.award-card {
+  margin: 0;
+}
+
+.award-card img {
+  width: 100%;
+  height: 255px;
+  display: block;
+  object-fit: cover;
+}
+
+.award-caption {
+  margin: 10px 0 0;
+
+  color: #1e1e1e;
+  font-family: Pretendard, sans-serif;
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.award-caption strong {
+  font-weight: 700;
+}
+
+/* PAGE 02 */
+
+.award-page-2 {
+  padding: 52px 80px 52px;
+}
+
+.award-display-area {
+  display: grid;
+  grid-template-columns: 590px 250px;
+  grid-template-rows: 70px auto;
+  column-gap: 24px;
+  row-gap: 13px;
+
+  width: 864px;
+  height: 516px;
+  box-sizing: border-box;
+}
+
+.page-2-label {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  margin: 0;
+  align-self: start;
+}
+
+.page-2-empty {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.award-display-card {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+
+  margin: 0;
+  padding: 0;
+}
+
+.award-poster-card {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  margin: 0;
+  padding: 0;
+}
+
+.award-display-card img,
+.award-poster-card img {
+  width: 100%;
+  height: 360px;
+
+  display: block;
+  object-fit: cover;
+}
+
+.award-poster-card .award-caption {
+  margin: 12px 0 0;
+
+  color: #1e1e1e;
+  font-family: Pretendard, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.award-poster-card .award-caption strong {
+  font-weight: 700;
+}
+/* PAGE 03 */
+
+.award-page-3 {
+  padding: 70px 80px 80px;
+}
+
+.award-summary {
+  width: 760px;
+}
+
+.award-summary h2 {
+  margin: 0 0 30px;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  font-family: Montserrat;
+  font-size: 78.353px;
+  font-weight: 800;
+  line-height: 64.88px;
+}
+
+.summary-intro {
+  margin: 0 0 45px;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.856px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.award-summary ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.award-summary li {
+  margin-bottom: 38px;
+}
+
+.award-summary li strong {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 15.267px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.award-summary li p {
+  margin: 0;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13.45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* AI DESIGN */
+
+#ai-design {
+  padding: 70px 80px 80px;
+  background: #fff;
+}
+
+#ai-design h2 {
+  margin: 0 0 36px;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13.272px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#ai-design ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 42px;
+  margin-bottom: 50px;
+}
+
+#ai-design figure {
+  margin: 0;
+}
+
+#ai-design figure img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+#ai-design article {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  gap: 30px;
+}
+
+#ai-design article h3 {
+  margin: 0;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 59.605px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#ai-design article p {
+  margin: 0;
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 10.667px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* MOTION */
+.motion-section {
+  display: grid;
+  grid-template-rows: auto auto auto;
+
+  padding: 42px 80px 62px;
+  background: #e9e9e9;
+}
+
+.motion-label {
+  margin: 0 0 20px;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 13.314px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* 사진 영역 */
+
+.motion-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+
+  width: 100%;
+  overflow: hidden;
+}
+
+.motion-gallery img {
+  width: 100%;
+  height: 260px;
+
+  display: block;
+  object-fit: cover;
+}
+
+/* 정보 영역 */
+
+.motion-info {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+
+  margin-top: 32px;
+}
+
+.motion-info h2 {
+  margin: 0;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 59.798px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.motion-info p {
+  margin: 10px 0 0;
+
+  color: #1e1e1e;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 10.701px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* ===============================
+   DESIGN PAGE RESPONSIVE ADD CODE
+   1280 / 1024 / 768 / 320
+================================ */
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* MOBILE MENU */
+.mobile-menu-btn {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* 1280 */
+@media (max-width: 1280px) {
+  .page,
+  .site-header,
+  .award-section,
+  .award-scroll,
+  .award-panel {
+    width: 1024px;
+    max-width: 100%;
+  }
+}
+
+/* 1024 */
+@media (max-width: 1024px) {
+  .page,
+  .site-header,
+  .award-section,
+  .award-scroll,
+  .award-panel {
+    width: 100%;
+  }
+
+  .site-header {
+    padding: 0 60px;
+  }
+
+  .hero__img {
+    left: 50%;
+    width: 82vw;
+    height: auto !important;
+    top: 40px;
+    transform: translateX(-50%);
+  }
+
+  .hero__copy {
+    left: 60px;
+  }
+
+  .hero__profile {
+    left: auto;
+    right: 60px;
+  }
+
+  .design-intro,
+  .tools-section,
+  .award-page-1,
+  .award-page-2,
+  .award-page-3,
+  #ai-design,
+  .motion-section {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .tool-card-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .award-display-area {
+    width: 100%;
+    grid-template-columns: 1fr 260px;
+  }
+
+  .flow-img,
+  .award-summary {
+    width: 100%;
+  }
+}
+
+/* 768 */
+@media (max-width: 768px) {
+  .page {
+    width: 100%;
+  }
+
+  .site-header {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    padding: 28px 32px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-left: 32px;
+    font-size: 18px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: fixed;
+    left: 18px;
+    top: 18px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .mobile-menu-btn span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #d9d9d9;
+    transform: rotate(45deg);
+  }
+
+  .site-nav {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    padding: 70px 32px;
+    background: #aaa;
+    z-index: 1001;
+    transition: left 0.35s ease;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .site-nav a {
+    font-size: 18px;
+  }
+
+  .site-nav a::after {
+    display: none;
+  }
+
+  #menu-toggle:checked ~ .site-nav {
+    left: 0;
+  }
+
+  .hero {
+    height: 720px;
+  }
+
+  .hero__img {
+    width: 76%;
+    height: auto !important;
+    aspect-ratio: auto;
+    left: 50%;
+    top: 250px;
+    transform: translateX(-50%);
+  }
+
+  .hero__copy {
+    display: none;
+  }
+
+  .hero__profile {
+    left: 82px;
+    top: 595px;
+    right: auto;
+    transform: none;
+  }
+
+  .design-intro {
+    padding: 90px 32px;
+  }
+
+  .design-intro h2 {
+    font-size: 54px;
+  }
+
+  .design-intro article h3 {
+    font-size: 28px;
+  }
+
+  .design-intro article p {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .tools-section {
+    padding: 70px 32px;
+  }
+
+  .tools-section h2::after {
+    width: 100%;
+  }
+
+  .tool-card-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .tool-card-list > li > article {
+    height: auto;
+    min-height: 330px;
+  }
+
+  .award-section,
+  .award-scroll,
+  .award-panel {
+    width: 100%;
+    height: auto;
+  }
+
+  .award-scroll {
+    display: block;
+    overflow: visible;
+  }
+
+  .award-panel {
+    flex: none;
+    padding: 80px 32px;
+  }
+
+  .award-title-area,
+  .award-book-area,
+  .award-display-area {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .award-title-area h2,
+  .award-summary h2 {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .award-title-area p {
+    margin-top: 24px;
+  }
+
+  .award-card,
+  .award-display-card,
+  .award-poster-card {
+    margin-top: 28px;
+  }
+
+  .award-card img,
+  .award-display-card img,
+  .award-poster-card img {
+    height: auto;
+  }
+
+  .award-nav {
+    display: none;
+  }
+
+  #ai-design {
+    padding: 80px 32px;
+  }
+
+  #ai-design ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  #ai-design figure img {
+    height: 220px;
+  }
+
+  #ai-design article {
+    display: block;
+  }
+
+  #ai-design article h3 {
+    margin-bottom: 24px;
+    font-size: 44px;
+  }
+
+  #ai-design article p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .motion-section {
+    padding: 70px 32px;
+  }
+
+  .motion-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .motion-gallery img {
+    height: auto;
+  }
+
+  .motion-info {
+    display: block;
+  }
+
+  .motion-info h2 {
+    font-size: 44px;
+  }
+
+  .motion-info p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+}
+
+/* 320 */
+@media (max-width: 320px) {
+  .site-header {
+    height: 110px;
+    padding: 28px 22px;
+  }
+
+  .logo {
+    margin-left: 24px;
+    font-size: 13px;
+  }
+
+  .hero {
+    height: 590px;
+  }
+
+  .hero__img {
+    width: 78%;
+    top: 225px;
+  }
+
+  .hero__profile {
+    left: 54px;
+    top: 485px;
+  }
+
+  .design-intro,
+  .tools-section,
+  .award-panel,
+  #ai-design,
+  .motion-section {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .design-intro h2 {
+    font-size: 42px;
+  }
+
+  .design-intro article h3 {
+    font-size: 23px;
+  }
+
+  .award-title-area h2,
+  .award-summary h2,
+  #ai-design article h3,
+  .motion-info h2 {
+    font-size: 36px;
+  }
+
+  #ai-design ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MOBILE MENU - CSS ONLY */
+
+.mobile-menu-btn {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    position: relative;
+    height: 120px;
+    padding: 28px 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    position: fixed;
+    left: 18px;
+    top: 18px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .mobile-menu-btn span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #d9d9d9;
+    transform: rotate(45deg);
+  }
+
+  .site-nav {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    padding: 70px 32px;
+    background: #aaa;
+    z-index: 1001;
+    transition: left 0.35s ease;
+  }
+
+  .site-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .site-nav a {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .site-nav a::after {
+    display: none;
+  }
+
+  #menu-toggle:checked ~ .site-nav {
+    left: 0;
+  }
+
+  #menu-toggle:checked ~ .mobile-menu-btn span {
+    background: #777;
+  }
+}
